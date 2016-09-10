@@ -73,13 +73,14 @@
             android:text="Kelas" />
 
         <Spinner
-            android:id="@+id/spinner1"
+            android:id="@+id/spinnerKelas1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:entries="@array/Kelas1" />
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/spinnerKelas2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal" />
@@ -132,5 +133,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hasil2" />
+
+        <TextView
+            android:id="@+id/textViewHasil3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Hasil3" />
     </LinearLayout>
 </ScrollView>
