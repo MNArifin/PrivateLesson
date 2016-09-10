@@ -54,16 +54,16 @@
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/radioButtonP"
+                android:id="@+id/radioButtonLK"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pria" />
+                android:text="Laki-laki" />
 
             <RadioButton
-                android:id="@+id/radioButtonW"
+                android:id="@+id/radioButtonPR"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Wanita" />
+                android:text="Perempuan" />
         </RadioGroup>
 
         <TextView
@@ -126,18 +126,24 @@
             android:id="@+id/textViewHasil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hasil" />
+            tools:text="Hasil" />
 
         <TextView
             android:id="@+id/textViewHasil2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hasil2" />
+            tools:text="Hasil2" />
 
         <TextView
             android:id="@+id/textViewHasil3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Hasil3" />
+
+        <TextView
+            android:id="@+id/textViewHasil4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Hasil4" />
     </LinearLayout>
 </ScrollView>
