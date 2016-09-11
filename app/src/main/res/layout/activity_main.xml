@@ -31,16 +31,17 @@
             android:layout_gravity="center_horizontal"
             android:src="@drawable/code" />
 
-        <TextView
-            android:id="@+id/textViewNama"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nama" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/editTextNama"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="Nama" />
+
+        </android.support.design.widget.TextInputLayout>
 
         <TextView
             android:id="@+id/textViewJK"
@@ -117,10 +118,13 @@
 
         <Button
             android:id="@+id/buttonOK"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:text="OK" />
+            android:background="@drawable/bgbtn"
+            android:text="OK"
+            android:textColor="@android:color/white" />
 
         <TextView
             android:id="@+id/textViewHasil"
