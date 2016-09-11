@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -15,6 +14,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import id.sch.smktelkom_mlg.tugas1.xirpl1018.privatelesson.adapter.Kelas2Adapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             {"RPL 1", "RPL 2", "RPL 3", "RPL 4", "RPL 5", "RPL 6", "TKJ 1", "TKJ 2", "TKJ 3", "TKJ 5"},
             {"RPL 1", "RPL 2", "RPL 3", "RPL 4", "RPL 5", "TKJ 1", "TKJ 2", "TKJ 3", "TKJ 4"}};
     ArrayList<String> listKelas2 = new ArrayList<>();
-    ArrayAdapter<String> adapter;
+    Kelas2Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +50,7 @@ public class MainActivity extends AppCompatActivity {
         tvHasil3 = (TextView) findViewById(R.id.textViewHasil3);
         tvHasil4 = (TextView) findViewById(R.id.textViewHasil4);
 
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listKelas2);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter = new Kelas2Adapter(this, listKelas2);
         spKelas2.setAdapter(adapter);
 
         spKelas1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long id) {
                 listKelas2.clear();
                 listKelas2.addAll(Arrays.asList(arKelas2[pos]));
+                adapter.setKelas1((String) spKelas1.getItemAtPosition(pos));
                 adapter.notifyDataSetChanged();
                 spKelas2.setSelection(0);
             }
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             tvHasil2.setText("Jenis Kelamin        : " + hasil2);
         }
 
-        tvHasil3.setText("Anda Kelas             : " + spKelas1.getSelectedItem().toString() + " " + spKelas2.getSelectedItem().toString());
+        tvHasil3.setText("Kelas                       : " + spKelas1.getSelectedItem().toString() + " " + spKelas2.getSelectedItem().toString());
 
         String hasil4 = "Materi                      : ";
         int startlen = hasil4.length();
