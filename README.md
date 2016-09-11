@@ -28,7 +28,7 @@ DETEKSI KESALAHAN :
 - NAMA          : M. Nur Arifin
 - KELAS         : XI RPL 1
 - NO, URUT      : 18
-- NIS           : 
+- NIS           : 4743/1462.070
 - NAMA SEKOLAH  : SMK TELKOM MALANG
 
 <br>
